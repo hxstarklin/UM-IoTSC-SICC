@@ -1,2 +1,2 @@
 # UM-IoTSC-SICC
-Sample codes for SICC
+Sample codes for SICC users.
