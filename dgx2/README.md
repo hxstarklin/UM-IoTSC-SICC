@@ -117,5 +117,6 @@ Create your own environment, for example: using anaconda virtual environment.
     $ sinfo
 
 More information: 
-https://slurm.schedmd.com
-https://slurm.schedmd.com/documentation.html
+
+ - https://slurm.schedmd.com
+ - https://slurm.schedmd.com/documentation.html
