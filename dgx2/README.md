@@ -3,15 +3,15 @@
 
 ## About Slurm
 
-Slurm is a resource manager and job scheduler. Through Slurm, users submit jobs which are scheduled and allocated resources (CPU time, memory, GPU etc.) to run in the computing cluster. Please record your job submission [here](https://forms.office.com/Pages/ResponsePage.aspx?id=RuzudkD-G06rQh1tn5G4qWXKXvHUnFVFuBJG5SUPRN9UMU0zR1VSMzlNQUVIWjExR0lCU0hXWEtaNS4u).
+Slurm is a resource manager and job scheduler. Through Slurm, users submit jobs that are scheduled and allocated resources (CPU time, memory, GPU, etc.) to run in the computing cluster. Please record your job submission [here](https://forms.office.com/Pages/ResponsePage.aspx?id=RuzudkD-G06rQh1tn5G4qWXKXvHUnFVFuBJG5SUPRN9UMU0zR1VSMzlNQUVIWjExR0lCU0hXWEtaNS4u).
 
 ## Rules
 
- - Every account can only submit 1 job at the same time
- - Every job can only have Maximum 4 GPUs
- - Time limitation for every job should be less than 48 hours
- - Every job submitted should record [here](https://forms.office.com/Pages/ResponsePage.aspx?id=RuzudkD-G06rQh1tn5G4qWXKXvHUnFVFuBJG5SUPRN9UMU0zR1VSMzlNQUVIWjExR0lCU0hXWEtaNS4u)
- - **If you do not follow the rules, IOTSC operator might cancel your job without announcement.**
+ - Every account can only have 1 job submitted at the same time.
+ - Every job can only use up to 4 GPUs
+ - The running time for every job should be <= 48 hours
+ - Every job submitted should be recorded first [here](https://forms.office.com/Pages/ResponsePage.aspx?id=RuzudkD-G06rQh1tn5G4qWXKXvHUnFVFuBJG5SUPRN9UMU0zR1VSMzlNQUVIWjExR0lCU0hXWEtaNS4u)
+ - **If you do not follow the rules, the IoTSC-SICC operators might cancel your job without notification.**
 
 Important parameters:
 
@@ -25,10 +25,10 @@ Important parameters:
 
     $ ssh username@10.113.178.130 
 
-## Run one task in compute node (Must submit jobs by slurm):
+## Run one task in compute node (Must submit jobs through Slurm):
 
-    $ srun --gres=gpu:1   // allocate 1 GPUs and invoke a shell directly
-    $ srun --time=5    // Job should run for no more than 5 minutes
+    $ srun --gres=gpu:1   // allocate 1 GPU and invoke a shell directly
+    $ srun --time=5    // time limitation
 
 ## Run commands in an interactive allocation:
 
@@ -49,12 +49,12 @@ Important parameters:
     compute-node$   nvidia-smi
     compute-node$   exit
 
-    $ exit     // exit the job and allocation
+    $ exit
     exit
     salloc: Relinquishing job allocation 12332
     salloc: Job allocation 12332 has been revoked.
 
-Once the job runs and the prompt appears, any further commands are run within the job's allocated resources until exit is invoked.
+Once the job starts and the prompt shows up, further commands can be run on the allocated resources until `exit` is invoked.
 
 ## Create a batch job script and submit the job:
 
@@ -89,9 +89,9 @@ Once the job runs and the prompt appears, any further commands are run within th
     source activate myenv
 
     # your program goes below
-    ## Below is the commands to run , for this example,
+    ## Below is the commands to run, for this example,
     ## Create a sample helloworld.py and Run the sample python file 
-    ## Result are stored at your definded --output location
+    ## Results are stored at the --output file above
     echo "print('Hello world')">>helloworld.py
     python helloworld.py
 
@@ -102,7 +102,7 @@ Once the job runs and the prompt appears, any further commands are run within th
 
 ## Create your environment:
 
-Create your own environment, for example: using anaconda virtual environment
+Create your own environment, for example: using anaconda virtual environment.
 
 ## List the jobs running/pending in the queue:
 
