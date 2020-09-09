@@ -15,6 +15,8 @@ Every job submitted should record [here](https://forms.office.com/Pages/Response
 
 Important parameters:
 
+| Parameter | Name |
+| ------ | ------ |
 | Cluster | SICC-DGX2 |
 | Job Submit | mgmt |
 | GPU compute nodes | DGX2 |
@@ -43,9 +45,9 @@ Important parameters:
     $ srun nvidia-smi 
 
     $ srun --pty bash   // run a shell in compute node
-  compute-node$   hostname
-  compute-node$   nvidia-smi
-  compute-node$   exit
+    compute-node$   hostname
+    compute-node$   nvidia-smi
+    compute-node$   exit
 
     $ exit     // exit the job and allocation
     exit
@@ -113,3 +115,7 @@ Create your own environment, for example: using anaconda virtual environment
 ## Display the queues available
 
     $ sinfo
+
+More information: 
+https://slurm.schedmd.com
+https://slurm.schedmd.com/documentation.html
