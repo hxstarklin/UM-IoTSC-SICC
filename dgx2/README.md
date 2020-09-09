@@ -1,2 +1,5 @@
 # Torch: Hello World!
-Run 'sbatch sjob.sh'
+Run:
+
+    python3 main_1gpu.py
+    
