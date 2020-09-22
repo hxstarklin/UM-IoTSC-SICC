@@ -1,5 +1,5 @@
 # Torch: Hello World!
-Run:
+Execute:
 
     sbatch sjob.sh
     
