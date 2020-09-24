@@ -11,7 +11,7 @@ Slurm is a resource manager and job scheduler. Through Slurm, users submit jobs 
  - Every job can only use up to 4 GPUs
  - The running time for every job should be <= 48 hours
  - Every job submitted should be recorded first [here](https://forms.office.com/Pages/ResponsePage.aspx?id=RuzudkD-G06rQh1tn5G4qWXKXvHUnFVFuBJG5SUPRN9UMU0zR1VSMzlNQUVIWjExR0lCU0hXWEtaNS4u)
- - **If you do not follow the rules, the IoTSC-SICC operators might cancel your job without notification.**
+ - **If you do not follow the rules, the IoTSC-SICC operators might cancel your job and might disable your account without notification.**
 
 Important parameters:
 
